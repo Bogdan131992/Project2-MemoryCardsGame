@@ -52,7 +52,7 @@ function startGame(cardsArray, totalTime) {
     document.getElementById("victory-text").classList.add("visible");
   }
 
-  // Hide all cards
+  // Hide all card
   function hideCards(cardsArray) {
     cardsArray.forEach((card) => {
       card.classList.remove("visible");
