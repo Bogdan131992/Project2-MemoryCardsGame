@@ -131,7 +131,7 @@ function startGame(cardsArray, totalTime) {
 }
 
 /**
- * Attaches a click event listener to each overlay and calls the startGame function when clicked.
+ * Attaches a click event listener to each overlay text and calls the startGame function when clicked.
  */
 function ready() {
   // Get all elements with class "overlay-text" and convert them into an array
