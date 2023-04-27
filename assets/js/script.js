@@ -7,13 +7,15 @@ totalTime - Total time in seconds to complete the game.
 */
 
 function startGame(cardsArray, totalTime) {
+  
   // Initialize variables to track the game state
-  let timeRemaining = totalTime;
-  let cardToCheck = null;
-  let matchedCards = [];
-  let busy = true;
-  let totalClicks = 0;
-  let countdown = 0;
+    let timeRemaining = totalTime;
+    let cardToCheck = null;
+    let matchedCards = [];
+    let busy = true;
+    let totalClicks = 0;
+    let countdown = 0;
+    
   // Get references to DOM elements
   const timer = document.getElementById("time-remaining");
   const ticker = document.getElementById("flips");
@@ -28,9 +30,9 @@ function startGame(cardsArray, totalTime) {
   // Hide all cards at the start of the game
   hideCards(cardsArray);
 
-  // Set initial values for the timer and click counter
-  timer.innerText = timeRemaining;
-  ticker.innerText = totalClicks;
+  // // Set initial values for the timer and click counter
+   timer.innerText = timeRemaining;
+   ticker.innerText = totalClicks;
 
   // Start countdown timer
   function startCountdown() {
@@ -146,8 +148,8 @@ function ready() {
     overlay.addEventListener("click", () => {
       // Remove the "visible" class from the overlay
       overlay.classList.remove("visible");
-      // Call the startGame function, passing in the cards array and 100 (total time in seconds)
-      startGame(cards, 50);
+      // Call the startGame function, passing in the cards array and 60 (total time in seconds)
+      startGame(cards, 60);
     });
   });
 }
