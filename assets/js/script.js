@@ -1,3 +1,5 @@
+'use strict';
+
 /**
 Function to start the memory card game.
 cardsArray - Array of card elements to be used in the game.
@@ -5,13 +7,13 @@ totalTime - Total time in seconds to complete the game.
 */
 
 function startGame(cardsArray, totalTime) {
-  // Initialize variables to track game state
-  let totalClicks = 0;
+  // Initialize variables to track the game state
   let timeRemaining = totalTime;
   let cardToCheck = null;
   let matchedCards = [];
   let busy = true;
-
+  let totalClicks = 0;
+  let countdown = 0;
   // Get references to DOM elements
   const timer = document.getElementById("time-remaining");
   const ticker = document.getElementById("flips");
