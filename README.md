@@ -99,7 +99,7 @@ The `ready` function gets references to DOM elements for the overlays and cards 
 - An overlay text that appears at the start of the game to give instructions and disappears once the game begins.
 - An overlay text that appears when the game is won or lost.
 
-## Technologies Used
+### Technologies Used
 
 - HTML
 - CSS
