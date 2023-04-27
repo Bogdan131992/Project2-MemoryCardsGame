@@ -1,5 +1,3 @@
-'use strict';
-
 /**
 Function to start the memory card game.
 cardsArray - Array of card elements to be used in the game.
@@ -7,7 +5,6 @@ totalTime - Total time in seconds to complete the game.
 */
 
 function startGame(cardsArray, totalTime) {
-  
   // Initialize variables to track the game state
     let timeRemaining = totalTime;
     let cardToCheck = null;
