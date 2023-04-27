@@ -1,9 +1,7 @@
-//Get the cards and messages
 /**
-
 Function to start the memory card game.
-@param {Array} cardsArray - Array of card elements to be used in the game.
-@param {Number} totalTime - Total time in seconds to complete the game.
+cardsArray - Array of card elements to be used in the game.
+totalTime - Total time in seconds to complete the game.
 */
 
 function startGame(cardsArray, totalTime) {
@@ -160,21 +158,3 @@ if (document.readyState === "loading") {
   // If the document has already finished loading, call the ready function
   ready();
 }
-
-// function ready() {
-//   let overlays = Array.from(document.getElementsByClassName("overlay-text"));
-//   let cards = Array.from(document.getElementsByClassName("card"));
-
-//   overlays.forEach((overlay) => {
-//     overlay.addEventListener("click", () => {
-//       overlay.classList.remove("visible");
-//       startGame(cards, 100);
-//     });
-//   });
-// }
-
-// if (document.readyState === "loading") {
-//   document.addEventListener("DOMContentLoaded", ready);
-// } else {
-//   ready();
-// }
