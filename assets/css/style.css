@@ -1,3 +1,7 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@1,300&family=Open+Sans:wght@300&family=Press+Start+2P&display=swap");
+
+/* general style */
+
 * {
   font-family: Verdana, Geneva, Tahoma, sans-serif;
   box-shadow: border-box;
@@ -10,32 +14,79 @@ html {
 body {
   margin: 0;
   background: radial-gradient(#0b180a, #212361);
+  border-top: 10px solid #20d40b;
+  padding: 3%;
 }
 
 .page-title {
+  font-family: "Press Start 2P", cursive;
   color: #20d40b;
   font-weight: normal;
   text-align: center;
-  font-size: 4em;
+  font-size: 3.5em;
   margin: 0.5%;
+  padding: 2%;
+}
+img {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border-radius: 7px;
 }
 
+/* overlay-text will be displayed on a dark background color, 
+using the z-index to create a sense of proximity to the user.
+This text is removed at the click event which will 
+delete the applied "visible class". */
+
+.overlay-text {
+  display: none;
+  position: fixed;
+  text-align: center;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  justify-content: center;
+  align-items: center;
+  z-index: 100;
+  color: #20d40b;
+  background-color: #272e2ad3;
+  font-size: 3em;
+}
+
+.overlay-text-small {
+  font-size: 0.5em;
+}
+.overlay-text.visible {
+  display: flex;
+  flex-direction: column;
+}
 .game-info-container {
   grid-column: 1/-1;
   display: flex;
   justify-content: space-between;
 }
-.game-info {
-  color: azure;
-  font-size: 2em;
+.overlay-text > p {
+  font-size: 0.5em;
+  color: #e9e9ee;
 }
+
+/* The information about the game as well as the "playing cards" elements are displayed using the grid. */
+.game-info {
+  font-family: "Press Start 2P", cursive;
+  color: azure;
+  font-size: 1.3em;
+}
+
 .game-container {
   display: grid;
   grid-template-columns: repeat(4, auto);
-  grid-gap: 10px;
-  margin: 50px;
+  grid-gap: 3%;
+  margin: 2%;
+  padding: 2%;
   justify-content: center;
-  perspective: 500px;
+  perspective: 479px;
 }
 
 .card {
@@ -44,6 +95,7 @@ body {
   width: 100px;
 }
 
+/* I applied the transition and transform properties to display the rotation of the cards from one side to the other */
 .card-face {
   position: absolute;
   width: 100%;
@@ -52,9 +104,8 @@ body {
   justify-content: center;
   align-items: center;
   backface-visibility: hidden;
-  border-radius: 12px;
-  border: 2px solid #20d40b;
-  transition: 500ms ease-in-out;
+  border-radius: 11px;
+  transition: 400ms ease-in-out;
 }
 
 .card.visible .card-back {
@@ -69,43 +120,22 @@ body {
   transform: rotateY(180deg);
 }
 
-img {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  border-radius: 12px;
-}
+/* Media to make the game responsive, for screens smaller than 600px
+ the cards will be displayed on 2 columns and the size of the texts will be reduced */
 
-.overlay-text > p {
-  font-size: 31%;
-  color: #e9e9ee;
-}
-
-.overlay-text {
-  display: none;
-  position: fixed;
-  top: 0;
-  left: 0;
-  bottom: 0;
-  right: 0;
-  justify-content: center;
-  align-items: center;
-  z-index: 100;
-  color: #20d40b;
-  background-color: #272e2ad3;
-  font-size: 3em;
-}
-
-.overlay-text-small {
-  font-size: 0.3em;
-}
-.overlay-text.visible {
-  display: flex;
-  flex-direction: column;
-}
 @media (max-width: 600px) {
+  .page-title {
+    font-size: 2em;
+  }
+
+  .overlay-text {
+    font-size: 2em;
+    padding: 2%;
+  }
   .game-container {
     grid-template-columns: repeat(2, auto);
+    border: 0;
+    padding: 2%;
   }
   .game-info-container {
     flex-direction: column;

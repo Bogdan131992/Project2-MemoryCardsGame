@@ -1,6 +1,10 @@
-//
-//Make sure that DOM is loading before the game
 //Get the cards and messages
+/**
+
+Function to start the memory card game.
+@param {Array} cardsArray - Array of card elements to be used in the game.
+@param {Number} totalTime - Total time in seconds to complete the game.
+*/
 
 function startGame(cardsArray, totalTime) {
   // Initialize variables to track game state
@@ -127,55 +131,50 @@ function startGame(cardsArray, totalTime) {
   });
 }
 
+/**
+ * Attaches a click event listener to each overlay and calls the startGame function when clicked.
+ *
+ */
 function ready() {
+  // Get all elements with class "overlay-text" and convert them into an array
   let overlays = Array.from(document.getElementsByClassName("overlay-text"));
+  // Get all elements with class "card" and convert them into an array
   let cards = Array.from(document.getElementsByClassName("card"));
 
+  // Add a click event listener to each overlay
   overlays.forEach((overlay) => {
     overlay.addEventListener("click", () => {
+      // Remove the "visible" class from the overlay
       overlay.classList.remove("visible");
-      startGame(cards, 100);
+      // Call the startGame function, passing in the cards array and 100 (total time in seconds)
+      startGame(cards, 50);
     });
   });
 }
 
+// Check if the document has finished loading
 if (document.readyState === "loading") {
+  // If the document is still loading, add a DOMContentLoaded event listener to the document that calls the ready function when the content is loaded
   document.addEventListener("DOMContentLoaded", ready);
 } else {
+  // If the document has already finished loading, call the ready function
   ready();
 }
 
-/**
- * Removes the initial message
- * return the cards on the click event
- */
+// function ready() {
+//   let overlays = Array.from(document.getElementsByClassName("overlay-text"));
+//   let cards = Array.from(document.getElementsByClassName("card"));
 
-/**
- * shuffle the cards
- */
+//   overlays.forEach((overlay) => {
+//     overlay.addEventListener("click", () => {
+//       overlay.classList.remove("visible");
+//       startGame(cards, 100);
+//     });
+//   });
+// }
 
-/**
- * Check if the cards match
- * If they match, leave them turned
- * If they do not match, they return to the initial state
- */
-
-/**
- * It counts the number of clicks and displays them in Flip
- */
-
-/**
- * At the beginning of the game it displays a number of seconds
- * That will be the time in which all the cards must be turned over
- * To win the game
- */
-
-/**
- * It displays a text that confirms winning the game
- * and the possibility of restarting the game
- */
-
-/**
- * It displays a text that confirms loosing the game
- * and the possibility of restarting the game
- */
+// if (document.readyState === "loading") {
+//   document.addEventListener("DOMContentLoaded", ready);
+// } else {
+//   ready();
+// }
