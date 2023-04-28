@@ -124,9 +124,9 @@ The game has been implemented with several functions that handle different aspec
 - [freeCodeCamp](https://www.youtube.com/watch?v=ZniVgo8U7ek)
 
 - [portExe](https://www.youtube.com/watch?v=3uuQ3g92oPQ)
+
 - [WebDevSimplified](https://www.youtube.com/watch?v=28VfzEiJgy4)
 
-- [Web-Dev-Github](https://github.com/WebDevSimplified/Mix-Or-Match)
 
 ### Images
 
