@@ -2,8 +2,9 @@
 
 ![img](readme-img/am-i-responsive-img.png)
 
-## 1. How to Use the Game
+## 1. Purpose of the project
 
+The purpose of this project was to create a memory game.
 The game has been implemented with several functions that handle different aspects of the game. These functions are responsible for shuffling cards, handling game state, and checking for matches.
 
 ## How to Play
@@ -15,62 +16,8 @@ The game has been implemented with several functions that handle different aspec
 5. Keep playing until you have found all the pairs or until the time runs out.
 6. If you successfully find all the pairs before the time runs out, you win the game!
 
-### startGame(cardsArray, totalTime)
 
-The `startGame` function initializes variables to track the game state and gets references to DOM elements. It then shuffles cards after a delay, starts a countdown timer, and hides all cards at the start of the game. Finally, it sets initial values for the timer and click counter. It takes two arguments:
-
-- `cardsArray` is an array of DOM elements representing the cards in the game.
-- `totalTime` is the amount of time, in seconds, that the player has to complete the game.
-
-### startCountdown()
-
-The `startCountdown` function starts the countdown timer and returns the interval ID.
-
-### gameOver()
-
-The `gameOver` function ends the game when the timer reaches zero by clearing the interval and showing the "game over" message.
-
-### victory()
-
-The `victory` function displays a victory message when all cards are matched by clearing the interval and showing the "victory" message.
-
-### hideCards(cardsArray)
-
-The `hideCards` function hides all cards at the start of the game by removing the "visible" and "matched" classes from all cards in the `cardsArray`.
-
-### flipCard(card)
-
-The `flipCard` function flips a card and checks for a match. If the card can be flipped, it increments the click counter, adds the "visible" class to the card, and checks if the flipped cards match.
-
-### checkForCardMatch(card)
-
-The `checkForCardMatch` function checks if two flipped cards match by comparing their image sources. If they match, it calls the `cardMatch()` function. Otherwise, it calls the `cardMismatch()` function.
-
-### cardMatch(card1, card2)
-
-The `cardMatch` function handles the case where two flipped cards match by pushing them to the `matchedCards` array, adding the "matched" class to both cards, and checking if all cards are matched.
-
-### cardMismatch(card1, card2)
-
-The `cardMismatch` function handles the case where two flipped cards do not match by removing the "visible" class from both cards after a delay of 1 second.
-
-### shuffleCards(cardsArray)
-
-The `shuffleCards` function shuffles cards using the Fisher-Yates algorithm by randomly swapping the order of cards in the `cardsArray`.
-
-### getCardType(card)
-
-The `getCardType` function gets the type of a card by checking its image source.
-
-### canFlipCard(card)
-
-The `canFlipCard` function checks if a card can be flipped by verifying if it is not busy, has not already been matched, and is not the same as the card already being checked.
-
-### ready()
-
-The `ready` function gets references to DOM elements for the overlays and cards and adds event listeners to the overlays to start the game
-
-## 2 Test cases (user story based with screenshots)
+## 2 Users Stories
 
 - As a user, when I load the page, I see a message telling me that I have to click to start the game, this message is displayed on a transparent background and behind it is a game with several cards
 
@@ -92,18 +39,11 @@ The `ready` function gets references to DOM elements for the overlays and cards 
 ![img](readme-img/game-over-img.png)
 
 ## 3. Features:
-
 - Randomly shuffled cards for a unique game every time.
 - A timer to add an element of challenge and excitement.
 - A counter to keep track of the number of flips made.
 - An overlay text that appears at the start of the game to give instructions and disappears once the game begins.
 - An overlay text that appears when the game is won or lost.
-
-### Technologies Used
-
-- HTML
-- CSS
-- JavaScript
 
 ## 4. future features:
 
@@ -115,7 +55,13 @@ The `ready` function gets references to DOM elements for the overlays and cards 
 
 - I chose the image on the back of the cards to be green to match the main title.
 
-## 6. Validator Testing
+### Technologies Used
+
+- HTML
+- CSS
+- JavaScript
+
+## 6. Testing
 
 ### Lighthouse check
 
@@ -145,9 +91,7 @@ The `ready` function gets references to DOM elements for the overlays and cards 
 
 ## 7. Deployment
 
-- The steps followed for project deployment are as follows:
-
-- In the GitHub repository I selected my project from the menu on the left.
+The project was deployed on Git Hub, after I created a new repository and wrote the program in Git Pod, I selected my project in GitHubGitHub repository I selected my project from the menu on the left.
 
 - Then I clicked on Settings and from the settings menu on the left I clicked on the Pages button
 
