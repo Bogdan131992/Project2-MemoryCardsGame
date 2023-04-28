@@ -7,7 +7,7 @@
 The purpose of this project was to create a memory game.
 The game has been implemented with several functions that handle different aspects of the game. These functions are responsible for shuffling cards, handling game state, and checking for matches.
 
-## How to Play
+### How to Play
 
 1. Click anywhere on the game screen to start the game.
 2. Click on any card to flip it and reveal the picture.
@@ -30,7 +30,8 @@ The game has been implemented with several functions that handle different aspec
 ![img](readme-img/start-game-img.png)
 
 - As a user, when I click on another book, if it's the same as the first one, they both stay facing away, if they have different images, they go back.
-  As a user, when I turn over all the cards in pairs of two of the same kind, I am greeted by a message on a transparent background that overlaps the game and which informs me that I have won, and gives me the opportunity to restart the game
+
+- As a user, when I turn over all the cards in pairs of two of the same kind, I am greeted by a message on a transparent background that overlaps the game and which informs me that I have won, and gives me the opportunity to restart the game
 
 ![img](readme-img/wingame-img.png)
 
@@ -55,13 +56,13 @@ The game has been implemented with several functions that handle different aspec
 
 - I chose the image on the back of the cards to be green to match the main title.
 
-### Technologies Used
+## 6. Technologies Used
 
 - HTML
 - CSS
 - JavaScript
 
-## 6. Testing
+## 7. Testing
 
 ### Lighthouse check
 
@@ -89,9 +90,9 @@ The game has been implemented with several functions that handle different aspec
 - below 600 px, the playing cards are displayed only on two columns, and the size of the titles decreases.
 - To create a responsive website for all devices
 
-## 7. Deployment
+## 8. Deployment
 
-The project was deployed on Git Hub, after I created a new repository and wrote the program in Git Pod, I selected my project in GitHubGitHub repository I selected my project from the menu on the left.
+- The project was deployed on GitHub, after I created a new repository and wrote the program in Git Pod, I selected my project in Git Hub repository, after this I selected my project from the menu on the left.
 
 - Then I clicked on Settings and from the settings menu on the left I clicked on the Pages button
 
@@ -108,7 +109,7 @@ The project was deployed on Git Hub, after I created a new repository and wrote 
 
 [via github](https://github.com/Bogdan131992/Project2-MemoryCardsGame)
 
-## 8. credits
+## 9. credits
 
 ### Content
 
