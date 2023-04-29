@@ -108,6 +108,8 @@ task within a certain time interval
 
 - [W3C CSS Validator](https://jigsaw.w3.org/css-validator/validator?uri=https%3A%2F%2Fbogdan131992.github.io%2FProject2-MemoryCardsGame%2F&profile=css3svg&usermedium=all&warning=1&vextwarning=&lang=en)
 
+- Java Script code was tested for errors on [jshint](https://jshint.com/) and has no error
+
 ### fixed bugs
 
 - During the validation test, the HTML code returned an error because we had an extra closing tag for a p element
