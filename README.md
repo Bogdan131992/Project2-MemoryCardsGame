@@ -126,6 +126,8 @@ task within a certain time interval
 
 ## 8. Deployment
 
+### On Github:
+
 - The project was deployed on GitHub, after I created a new repository and wrote the program in Git Pod, I selected my project in Git Hub repository, after this I selected my project from the menu on the left.
 
 - Then I clicked on Settings and from the settings menu on the left I clicked on the Pages button
@@ -139,9 +141,21 @@ task within a certain time interval
 - I was informed that the deployment process was successful and I received a link for my website
 
 
-[via gitpod - live link](https://bogdan131992.github.io/Project2-MemoryCardsGame/)
+### On Gitpod:
 
-[via github](https://github.com/Bogdan131992/Project2-MemoryCardsGame)
+From the github page I select my project, then I click on Gitpod green button.
+- Then I selected New Workspace and then entered in the online programming environment.
+- From the menu on the left, I selected the option to create new files and created the necessary files for the project
+- In a folder I put all the necessary images that I downloaded from the Internet
+- I entered the command python -m http.server in the terminal to open a live server
+- To save the changes, I entered the git add command in the terminal
+- Also I used in the terminal  git commit -m "" to commit the changes 
+- And then to push the changes to Github I used the git push command in the terminal.
+
+
+[Gitpod - live link](https://bogdan131992.github.io/Project2-MemoryCardsGame/)
+
+[Github ](https://github.com/Bogdan131992/Project2-MemoryCardsGame)
 
 ## 9. credits
 

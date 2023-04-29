@@ -22,7 +22,7 @@ function initializeGame() {
   let overlays = Array.from(document.getElementsByClassName("overlay-text"));
   let cards = Array.from(document.getElementsByClassName("card"));
   overlays.forEach((overlay) => {
-    overlay.addEventListener("click", () => {
+    overlay.addEventListener("click", function() {
       overlay.classList.remove("visible");
       startGame(cards, 60);
     });
