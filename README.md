@@ -19,25 +19,35 @@ The game has been implemented with several functions that handle different aspec
 
 ## 2 Users Stories
 
-- As a user, when I load the page, I see a message telling me that I have to click to start the game, this message is displayed on a transparent background and behind it is a game with several cards
+- As a user, I want to have information about the instructions of the game
 
-  ![img](readme-img/startpageimg.png)
+![img](readme-img/userone.png)
 
-- As a user, when I click on the screen, the message with a transparent background disappears and I see a game that has a time of 60 seconds that decreases and the title tells me to match all the cards
+- As a user, I prefer to play an interactive game that asks me to complete a 
+task within a certain time interval
 
-- As a user, when I click on a card it turns around and shows me an image, the number of flips is recorded and displayed on the right side above the game
+![img](readme-img/usertime.png)
 
-![img](readme-img/start-game-img.png)
+- As a user, I would like to know how many flips I used
 
-- As a user, when I click on another card, if it's the same as the first one, they both stay facing away, if they have different images, they go back.
+![img](readme-img/userflips.png)
 
-- As a user, when I turn over all the cards in pairs of two of the same kind, I am greeted by a message on a transparent background that overlaps the game and which informs me that I have won, and gives me the opportunity to restart the game
+- As a user, I would like to know what happens if the returned cards do match
 
-![img](readme-img/wingame-img.png)
+![img](readme-img/usermatch.png)
 
-- As a user, if I do not manage to turn over all the cards in 6o seconds, I am greeted by a message that informs me that the game is over and gives me the opportunity to restart the game
+- As a user, I would like to know what happens if the returned cards do not match
 
-![img](readme-img/game-over-img.png)
+![img](readme-img/usermismatch.png)
+
+- As a user  I would like to know what happens if I manage to turn all the cards
+
+![img](readme-img/userwon.png)
+
+- As a user, I would like to know what happens if I fail to turn all the cards
+
+![img](readme-img/userlost.png)
+
 
 ## 3. Features:
 - Randomly shuffled cards for a unique game every time.
@@ -61,8 +71,32 @@ The game has been implemented with several functions that handle different aspec
 - HTML
 - CSS
 - JavaScript
+- GitPod
+- GitHub
+- Visual Studio
 
 ## 7. Testing
+
+### User Stories:
+- As a user, when I load the page, I see a message telling me that I have to click to start the game, this message is displayed on a transparent background and behind it is a game with several cards
+
+  ![img](readme-img/startpageimg.png)
+
+- As a user, when I click on the screen, the message with a transparent background disappears and I see a game that has a time of 60 seconds that decreases and the title tells me to match all the cards
+
+- As a user, when I click on a card it turns around and shows me an image, the number of flips is recorded and displayed on the right side above the game
+
+![img](readme-img/start-game-img.png)
+
+- As a user, when I click on another card, if it's the same as the first one, they both stay facing away, if they have different images, they turn back.
+
+- As a user, when I turn over all the cards in pairs of two of the same kind, I am greeted by a message on a transparent background that overlaps the game and which informs me that I have won, and gives me the opportunity to restart the game
+
+![img](readme-img/wingame-img.png)
+
+- As a user, if I do not manage to turn over all the cards in 6o seconds, I am greeted by a message that informs me that the game is over and gives me the opportunity to restart the game
+
+![img](readme-img/game-over-img.png)
 
 ### Lighthouse check
 
