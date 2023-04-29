@@ -29,7 +29,7 @@ The game has been implemented with several functions that handle different aspec
 
 ![img](readme-img/start-game-img.png)
 
-- As a user, when I click on another book, if it's the same as the first one, they both stay facing away, if they have different images, they go back.
+- As a user, when I click on another card, if it's the same as the first one, they both stay facing away, if they have different images, they go back.
 
 - As a user, when I turn over all the cards in pairs of two of the same kind, I am greeted by a message on a transparent background that overlaps the game and which informs me that I have won, and gives me the opportunity to restart the game
 
@@ -115,7 +115,7 @@ The game has been implemented with several functions that handle different aspec
 
 - To implement this game and to understand the algorithms behind the game, I was inspired by two projects that I found on YouTube.
 
-- For the structure of the program in HTMl, especially the arrangement of the playing cards, I was inspired by the project presented by freeCodeCamp.
+- For the structure of the program in HTML, especially the arrangement of the playing cards, I was inspired by the project presented by freeCodeCamp.
 
 - For the functional part of Java Script as well as for how to apply the styles, I would use the videos presented by the YouTube channels WebDev and Port Exe.
 

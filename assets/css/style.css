@@ -140,5 +140,7 @@ delete the applied "visible class". */
   .game-info-container {
     flex-direction: column;
     align-items: center;
-  }
+    margin-bottom: 5px;
+    row-gap: 16px;
+      }
 }
