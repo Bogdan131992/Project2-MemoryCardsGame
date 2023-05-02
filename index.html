@@ -5,296 +5,299 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description"
-    content=" MemoryGame, Playing-Cards">
+    content= "MemoryGame">
    <link rel="stylesheet" href="assets/css/style.css">
-    <title>Cards Memory Game</title>
+    <title>Memory Game</title>
   </head>
 
   <body>
-    <h1 class="page-title">Match all the cards</h1>
+    <h1 class="main-title">Match all the images</h1>
+
+    <!-- The way I placed the image elements and the info game elements in the divs and the way 
+    I applied the image element classes was inspired by the Web Dev Simplifyied video. -->
 
     <!-- Here are the texts that appear superimposed at the beginning of the game with the message:
   Start Game and the game instructions are displayed, as well as the superimposed texts
   that announce victory or defeat with the possibility of restarting the game -->
 
-    <div class="overlay-text visible">
+    <div class="cover-text active">
       <p>Instructions:</p>
       <p>
-        Try to find all the pairs of cards that have the same picture on them
+        Try to find all the pairs of images that have the same picture on them
       </p>
       <p>before the time runs out!</p>
       <em>To start click anywhere</em>
     </div>
-    <div id="game-over-text" class="overlay-text">
-      Game Over!
-      <span class="overlay-text-small">Click to Restart</span>
+    <div id="end-game-text" class="cover-text">
+      This time you lost the game!
+      <span class="cover-text-small">Click to Pay Again</span>
     </div>
-    <div id="victory-text" class="overlay-text">
+    <div id="win-text" class="cover-text">
       You Won the Game!
-      <span class="overlay-text-small">Click to Restart</span>
+      <span class="cover-text-small">Click to try once more</span>
     </div>
 
     <!-- In this "game container" section I have included the information about the time and the number of attempts 
-  to match the cards, as well as all the divs with the eight repeating cards. In each div that contains a book, 
-  there are two overlapping images that can be made visible through the application of the visible class. -->
+  to match the images, as well as all the divs with the eight repeating images. In each div 
+  there are two overlapping images that can be made visible through the application of the active class. -->
 
     <div class="game-container">
-      <div class="game-info-container">
-        <div class="game-info">
-          Time <span class="game-info" id="time-remaining">60</span>
+      <div class="play-info-container">
+        <div class="play-info">
+          Time <span class="play-info" id="time-remaining">60</span>
         </div>
-        <div class="game-info">
-          Flips <span class="game-info" id="flips">0</span>
+        <div class="play-info">
+          Flips <span class="play-info" id="flips">0</span>
         </div>
       </div>
 
-      <div class="card">
-        <div class="card-back card-face">
+      <div class="image">
+        <div class="image-back image-face">
           <img
-            src="assets/images/backcard.jpg"
-            alt="image of the back of a playing card"
+            src="assets/images/backimage.jpg"
+            alt="image of the back of a playing image"
           >
         </div>
-        <div class="card-front card-face">
+        <div class="image-front image-face">
           <img
-            class="card-value"
+            class="image-value"
             src="assets/images/imgdonkeys.jpeg"
             alt="image of two donkeys"
           >
         </div>
       </div>
 
-      <div class="card">
-        <div class="card-back card-face">
+      <div class="image">
+        <div class="image-back image-face">
           <img
-            src="assets/images/backcard.jpg"
-            alt="image of the back of a playing card"
+            src="assets/images/backimage.jpg"
+            alt="image of the back of a playing image"
           >
         </div>
-        <div class="card-front card-face">
+        <div class="image-front image-face">
           <img
-            class="card-value"
+            class="image-value"
             src="assets/images/imgdonkeys.jpeg"
             alt="image of two donkeys"
           >
         </div>
       </div>
 
-      <div class="card">
-        <div class="card-back card-face">
+      <div class="image">
+        <div class="image-back image-face">
           <img
-            src="assets/images/backcard.jpg"
-            alt="image of the back of a playing card"
+            src="assets/images/backimage.jpg"
+            alt="image of the back of a playing image"
           >
         </div>
-        <div class="card-front card-face">
+        <div class="image-front image-face">
           <img
-            class="card-value"
+            class="image-value"
             src="assets/images/imgrabbit.jpeg"
             alt="image of a rabbit"
           >
         </div>
       </div>
-      <div class="card">
-        <div class="card-back card-face">
+      <div class="image">
+        <div class="image-back image-face">
           <img
-            src="assets/images/backcard.jpg"
-            alt="image of the back of a playing card"
+            src="assets/images/backimage.jpg"
+            alt="image of the back of a playing image"
           >
         </div>
-        <div class="card-front card-face">
+        <div class="image-front image-face">
           <img
-            class="card-value"
+            class="image-value"
             src="assets/images/imgrabbit.jpeg"
             alt="image of a rabbit"
           >
         </div>
       </div>
-      <div class="card">
-        <div class="card-back card-face">
+      <div class="image">
+        <div class="image-back image-face">
           <img
-            src="assets/images/backcard.jpg"
-            alt="image of the back of a playing card"
+            src="assets/images/backimage.jpg"
+            alt="image of the back of a playing image"
           >
         </div>
-        <div class="card-front card-face">
+        <div class="image-front image-face">
           <img
-            class="card-value"
+            class="image-value"
             src="assets/images/imgbird.jpeg"
             alt="image of a red bird"
           >
         </div>
       </div>
-      <div class="card">
-        <div class="card-back card-face">
+      <div class="image">
+        <div class="image-back image-face">
           <img
-            src="assets/images/backcard.jpg"
-            alt="image of the back of a playing card"
+            src="assets/images/backimage.jpg"
+            alt="image of the back of a playing image"
           >
         </div>
-        <div class="card-front card-face">
+        <div class="image-front image-face">
           <img
-            class="card-value"
+            class="image-value"
             src="assets/images/imgbird.jpeg"
             alt="image of a red bird"
           >
         </div>
       </div>
 
-      <div class="card">
-        <div class="card-back card-face">
+      <div class="image">
+        <div class="image-back image-face">
           <img
-            src="assets/images/backcard.jpg"
-            alt="image of the back of a playing card"
+            src="assets/images/backimage.jpg"
+            alt="image of the back of a playing image"
           >
         </div>
-        <div class="card-front card-face">
+        <div class="image-front image-face">
           <img
-            class="card-value"
+            class="image-value"
             src="assets/images/imgwolf.jpeg"
             alt="image of a wolf in winter"
           >
         </div>
       </div>
 
-      <div class="card">
-        <div class="card-back card-face">
+      <div class="image">
+        <div class="image-back image-face">
           <img
-            src="assets/images/backcard.jpg"
-            alt="image of the back of a playing card"
+            src="assets/images/backimage.jpg"
+            alt="image of the back of a playing image"
           >
         </div>
-        <div class="card-front card-face">
+        <div class="image-front image-face">
           <img
-            class="card-value"
+            class="image-value"
             src="assets/images/imgwolf.jpeg"
             alt="image of a wolf in winter"
           >
         </div>
       </div>
 
-      <div class="card">
-        <div class="card-back card-face">
+      <div class="image">
+        <div class="image-back image-face">
           <img
-            src="assets/images/backcard.jpg"
-            alt="image of the back of a playing card"
+            src="assets/images/backimage.jpg"
+            alt="image of the back of a playing image"
           >
         </div>
-        <div class="card-front card-face">
+        <div class="image-front image-face">
           <img
-            class="card-value"
+            class="image-value"
             src="assets/images/imgmonkey.jpeg"
             alt="image of a monkey"
           >
         </div>
       </div>
 
-      <div class="card">
-        <div class="card-back card-face">
+      <div class="image">
+        <div class="image-back image-face">
           <img
-            src="assets/images/backcard.jpg"
-            alt="image of the back of a playing card"
+            src="assets/images/backimage.jpg"
+            alt="image of the back of a playing image"
           >
         </div>
-        <div class="card-front card-face">
+        <div class="image-front image-face">
           <img
-            class="card-value"
+            class="image-value"
             src="assets/images/imgmonkey.jpeg"
             alt="image of a monkey"
           >
         </div>
       </div>
 
-      <div class="card">
-        <div class="card-back card-face">
+      <div class="image">
+        <div class="image-back image-face">
           <img
-            src="assets/images/backcard.jpg"
-            alt="image of the back of a playing card"
+            src="assets/images/backimage.jpg"
+            alt="image of the back of a playing image"
           >
         </div>
-        <div class="card-front card-face">
+        <div class="image-front image-face">
           <img
-            class="card-value"
+            class="image-value"
             src="assets/images/imghorse.jpeg"
             alt="picture a horse and a colt"
           >
         </div>
       </div>
 
-      <div class="card">
-        <div class="card-back card-face">
+      <div class="image">
+        <div class="image-back image-face">
           <img
-            src="assets/images/backcard.jpg"
-            alt="image of the back of a playing card"
+            src="assets/images/backimage.jpg"
+            alt="image of the back of a playing image"
           >
         </div>
-        <div class="card-front card-face">
+        <div class="image-front image-face">
           <img
-            class="card-value"
+            class="image-value"
             src="assets/images/imghorse.jpeg"
             alt="picture a horse and a colt"
           >
         </div>
       </div>
 
-      <div class="card">
-        <div class="card-back card-face">
+      <div class="image">
+        <div class="image-back image-face">
           <img
-            src="assets/images/backcard.jpg"
-            alt="image of the back of a playing card"
+            src="assets/images/backimage.jpg"
+            alt="image of the back of a playing image"
           >
         </div>
-        <div class="card-front card-face">
+        <div class="image-front image-face">
           <img
-            class="card-value"
+            class="image-value"
             src="assets/images/imgowl.jpeg"
             alt="picture with an owl"
           >
         </div>
       </div>
 
-      <div class="card">
-        <div class="card-back card-face">
+      <div class="image">
+        <div class="image-back image-face">
           <img
-            src="assets/images/backcard.jpg"
-            alt="image of the back of a playing card"
+            src="assets/images/backimage.jpg"
+            alt="image of the back of a playing image"
           >
         </div>
-        <div class="card-front card-face">
+        <div class="image-front image-face">
           <img
-            class="card-value"
+            class="image-value"
             src="assets/images/imgowl.jpeg"
             alt="picture with an owl"
           >
         </div>
       </div>
 
-      <div class="card">
-        <div class="card-back card-face">
+      <div class="image">
+        <div class="image-back image-face">
           <img
-            src="assets/images/backcard.jpg"
-            alt="image of the back of a playing card"
+            src="assets/images/backimage.jpg"
+            alt="image of the back of a playing image"
           >
         </div>
-        <div class="card-front card-face">
+        <div class="image-front image-face">
           <img
-            class="card-value"
+            class="image-value"
             src="assets/images/imgmouse.jpeg"
             alt="image of a little mouse on a yellow flower"
           >
         </div>
       </div>
 
-      <div class="card">
-        <div class="card-back card-face">
+      <div class="image">
+        <div class="image-back image-face">
           <img
-            src="assets/images/backcard.jpg"
-            alt="image of the back of a playing card"
+            src="assets/images/backimage.jpg"
+            alt="image of the back of a playing image"
           >
         </div>
-        <div class="card-front card-face">
+        <div class="image-front image-face">
           <img
-            class="card-value"
+            class="image-value"
             src="assets/images/imgmouse.jpeg"
             alt="image of a little mouse on a yellow flower"
           >

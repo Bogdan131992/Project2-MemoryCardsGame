@@ -1,18 +1,18 @@
-# Cards - Memory Game
+# Memory Game
 
 ![img](readme-img/am-i-responsive-img.png)
 
 ## 1. Purpose of the project
 
 The purpose of this project was to create a memory game.
-The game has been implemented with several functions that handle different aspects of the game. These functions are responsible for shuffling cards, handling game state, and checking for matches.
+The game has been implemented with several functions that handle different aspects of the game. These functions are responsible for shuffling images, handling game state, and checking for matches.
 
 ### How to Play
 
 1. Click anywhere on the game screen to start the game.
-2. Click on any card to flip it and reveal the picture.
-3. Click on another card to reveal its picture.
-4. If the pictures on the cards match, they will remain face-up and you will earn points. If they don't match, they will be flipped back over and you can continue playing.
+2. Click on any image to flip it and reveal the picture.
+3. Click on another image to reveal its picture.
+4. If the pictures on the images match, they will remain face-up and you will earn points. If they don't match, they will be flipped back over and you can continue playing.
 5. Keep playing until you have found all the pairs or until the time runs out.
 6. If you successfully find all the pairs before the time runs out, you win the game!
 
@@ -32,25 +32,25 @@ task within a certain time interval
 
 ![img](readme-img/userflips.png)
 
-- As a user, I would like to know what happens if the returned cards do match
+- As a user, I would like to know what happens if the returned images do match
 
 ![img](readme-img/usermatch.png)
 
-- As a user, I would like to know what happens if the returned cards do not match
+- As a user, I would like to know what happens if the returned images do not match
 
 ![img](readme-img/usermismatch.png)
 
-- As a user  I would like to know what happens if I manage to turn all the cards
+- As a user  I would like to know what happens if I manage to turn all the images
 
 ![img](readme-img/userwon.png)
 
-- As a user, I would like to know what happens if I fail to turn all the cards
+- As a user, I would like to know what happens if I fail to turn all the images
 
 ![img](readme-img/userlost.png)
 
 
 ## 3. Features:
-- Randomly shuffled cards for a unique game every time.
+- Randomly shuffled images for a unique game every time.
 - A timer to add an element of challenge and excitement.
 - A counter to keep track of the number of flips made.
 - An overlay text that appears at the start of the game to give instructions and disappears once the game begins.
@@ -64,7 +64,7 @@ task within a certain time interval
 
 - I used a very simple design. I applied a radial gradient for the background by combining two colors (#0b180a, #212361) to match the text color (#20d40b) of the title. For the smaller text that displays the time and flip number I used a light color (#e9e9ee)
 
-- I chose the image on the back of the cards to be green to match the main title.
+- I chose the image on the back of the images to be green to match the main title.
 
 ## 6. Technologies Used
 
@@ -78,23 +78,23 @@ task within a certain time interval
 ## 7. Testing
 
 ### User Stories:
-- As a user, when I load the page, I see a message telling me that I have to click to start the game, this message is displayed on a transparent background and behind it is a game with several cards
+- As a user, when I load the page, I see a message telling me that I have to click to start the game, this message is displayed on a transparent background and behind it is a game with several images
 
   ![img](readme-img/startpageimg.png)
 
-- As a user, when I click on the screen, the message with a transparent background disappears and I see a game that has a time of 60 seconds that decreases and the title tells me to match all the cards
+- As a user, when I click on the screen, the message with a transparent background disappears and I see a game that has a time of 60 seconds that decreases and the title tells me to match all the images
 
-- As a user, when I click on a card it turns around and shows me an image, the number of flips is recorded and displayed on the right side above the game
+- As a user, when I click on a image it turns around and shows me an image, the number of flips is recorded and displayed on the right side above the game
 
 ![img](readme-img/start-game-img.png)
 
-- As a user, when I click on another card, if it's the same as the first one, they both stay facing away, if they have different images, they turn back.
+- As a user, when I click on another image, if it's the same as the first one, they both stay facing away, if they have different images, they turn back.
 
-- As a user, when I turn over all the cards in pairs of two of the same kind, I am greeted by a message on a transparent background that overlaps the game and which informs me that I have won, and gives me the opportunity to restart the game
+- As a user, when I turn over all the images in pairs of two of the same kind, I am greeted by a message on a transparent background that overlaps the game and which informs me that I have won, and gives me the opportunity to restart the game
 
 ![img](readme-img/wingame-img.png)
 
-- As a user, if I do not manage to turn over all the cards in 6o seconds, I am greeted by a message that informs me that the game is over and gives me the opportunity to restart the game
+- As a user, if I do not manage to turn over all the images in 6o seconds, I am greeted by a message that informs me that the game is over and gives me the opportunity to restart the game
 
 ![img](readme-img/game-over-img.png)
 
@@ -123,7 +123,7 @@ task within a certain time interval
 ## supported screens
 
 - I used media queries (@media screen and (max-width:600px))
-- below 600 px, the playing cards are displayed only on two columns, and the size of the titles decreases.
+- below 600 px, the playing images are displayed only on two columns, and the size of the titles decreases.
 - To create a responsive website for all devices
 
 ## 8. Deployment
@@ -165,7 +165,7 @@ From the github page I select my project, then I click on Gitpod green button.
 
 - To implement this game and to understand the algorithms behind the game, I was inspired by two projects that I found on YouTube.
 
-- For the structure of the program in HTML, especially the arrangement of the playing cards, I was inspired by the project presented by freeCodeCamp.
+- For the structure of the program in HTML, especially the arrangement of the playing images, I was inspired by the project presented by freeCodeCamp.
 
 - For the functional part of Java Script as well as for how to apply the styles, I would use the videos presented by the YouTube channels WebDev and Port Exe.
 

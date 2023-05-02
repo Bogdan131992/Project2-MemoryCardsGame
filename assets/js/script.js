@@ -1,63 +1,63 @@
 // Initialize global variables
 let timeRemaining = 0;
-let cardToCheck = null;
-let matchedCards = [];
+let imageToCheck = null;
+let pairedImages = [];
 let busy = true;
 let totalClicks = 0;
 let countdown = 0;
-let cardsArray = [];
+let imagesArray = [];
 
 // Get references to DOM elements
 let timer = document.getElementById("time-remaining");
-let ticker = document.getElementById("flips");
+let flipNr = document.getElementById("flips");
 document.addEventListener("DOMContentLoaded", initializeGame);
 
-/** Get all elements with class "overlay-text" and convert them into an array
-* Get all elements with class "card" and convert them into an array
+/** Get all elements with class "cover-text" and convert them into an array
+* Get all elements with class "image" and convert them into an array
 * Add a click event listener to each overlay
-* Remove the "visible" class from the overlay
-Call the startGame function, passing in the cards array and 60 (total time in seconds)
+* Remove the "active" class from the overlay
+Call the startGame function, passing in the images array and 60 (total time in seconds)
 */
 function initializeGame() {
-  let overlays = Array.from(document.getElementsByClassName("overlay-text"));
-  let cards = Array.from(document.getElementsByClassName("card"));
-  overlays.forEach((overlay) => {
+  let covers = Array.from(document.getElementsByClassName("cover-text"));
+  let images = Array.from(document.getElementsByClassName("image"));
+  covers.forEach((overlay) => {
     overlay.addEventListener("click", function() {
-      overlay.classList.remove("visible");
-      startGame(cards, 60);
+      overlay.classList.remove("active");
+      startGame(images, 60);
     });
   });
 }
 
-/** Shuffle cards after a delay and start countdown timer*/
-function startGame(cards, totalTime) {
-  matchedCards = [];
+/** Shuffle images after a delay and start countdown timer*/
+function startGame(images, totalTime) {
+  pairedImages = [];
   timeRemaining = totalTime;
-  cardsArray = cards;
+  imagesArray = images;
   setTimeout(function () {
-    shuffleCards(cards);
+    shuffleImages(images);
     countdown = startCountdown();
     busy = false;
   }, 500);
 
-  hideCards(cards);
+  hideImages(images);
   timer.innerText = timeRemaining;
   totalClicks = 0;
-  ticker.innerText = totalClicks;
+  flipNr.innerText = totalClicks;
 
-  cards.forEach(function (card) {
-    card.addEventListener("click", function () {
-      flipCard(card);
+  images.forEach(function (image) {
+    image.addEventListener("click", function () {
+      flipImage(image);
     });
   });
 }
 
-/** Shuffle cards using the Fisher-Yates algorithm*/
-function shuffleCards(cardsArray) {
-  for (let i = cardsArray.length - 1; i > 0; i--) {
+/** Shuffle images using the Fisher-Yates algorithm*/
+function shuffleImages(imagesArray) {
+  for (let i = imagesArray.length - 1; i > 0; i--) {
     let randIndex = Math.floor(Math.random() * (i + 1));
-    cardsArray[randIndex].style.order = i;
-    cardsArray[i].style.order = randIndex;
+    imagesArray[randIndex].style.order = i;
+    imagesArray[i].style.order = randIndex;
   }
 }
 
@@ -73,72 +73,73 @@ function startCountdown() {
 /** End the game when the timer reaches zero*/
 function gameOver() {
   clearInterval(countdown);
-  document.getElementById("game-over-text").classList.add("visible");
+  document.getElementById("end-game-text").classList.add("active");
 }
 
-function hideCards(cardsArray) {
-  cardsArray.forEach(function (card) {
-    card.classList.remove("visible");
-    card.classList.remove("matched");
+function hideImages(imagesArray) {
+  imagesArray.forEach(function (image) {
+    image.classList.remove("active");
+    image.classList.remove("paired");
   });
 }
 
-/** Flip a card and check for a match*/
-function flipCard(card) {
-  if (canFlipCard(card)) {
+/** Flip an image and check for a match*/
+function flipImage(image) {
+  if (canFlipImage(image)) {
     totalClicks++;
-    ticker.innerText = totalClicks;
-    card.classList.add("visible");
+    flipNr.innerText = totalClicks;
+    image.classList.add("active");
 
-    if (cardToCheck) {
-      checkForCardMatch(card);
+    if (imageToCheck) {
+      checkForImageMatch(image);
     } else {
-      cardToCheck = card;
+      imageToCheck = image;
     }
   }
 }
 
-/** Check if a card can be flipped*/
-function canFlipCard(card) {
-  return !busy && !matchedCards.includes(card) && card !== cardToCheck;
+/** Check if a image can be flipped*/
+function canFlipImage(image) {
+  return !busy && !pairedImages.includes(image) && image !== imageToCheck;
 }
 
-/** Check if two flipped cards match*/
-function checkForCardMatch(card) {
-  if (getCardType(card) === getCardType(cardToCheck))
-    cardMatch(card, cardToCheck);
-  else cardMismatch(card, cardToCheck);
+/** Check if two flipped images match*/
+function checkForImageMatch(image) {
+  if (getImageType(image) === getImageType(imageToCheck))
+    imageMatch(image, imageToCheck);
+  else imageMismatch(image, imageToCheck);
 
-  cardToCheck = null;
+  imageToCheck = null;
 }
 
-/** Get the type of card by checking its image source*/
-function getCardType(card) {
-  return card.getElementsByClassName("card-value")[0].src;
+/** Get the type of image by checking its image source*/
+function getImageType(image) {
+  return image.getElementsByClassName("image-value")[0].src;
 }
 
-/** Handle case where two flipped cards match*/
-function cardMatch(card1, card2) {
-  matchedCards.push(card1);
-  matchedCards.push(card2);
-  card1.classList.add("matched");
-  card2.classList.add("matched");
-  if (matchedCards.length === cardsArray.length) displayVictory();
+/** Handle case where two flipped images match*/
+function imageMatch(image1, image2) {
+  pairedImages.push(image1);
+  pairedImages.push(image2);
+  image1.classList.add("paired");
+  image2.classList.add("paired");
+  if (pairedImages.length === imagesArray.length) displayWinText();
 }
 
-/**  Handle case where two flipped cards do not match*/
-function cardMismatch(card1, card2) {
+/**  Handle case where two flipped images do not match*/
+function imageMismatch(image1, image2) {
   busy = true;
   setTimeout(function () {
-    card1.classList.remove("visible");
-    card2.classList.remove("visible");
+    image1.classList.remove("active");
+    image2.classList.remove("active");
     busy = false;
   }, 1000);
 }
 
-/** Display a victory message when all cards are matched
+/** Display a victory message when all images are paired
  */
-function displayVictory() {
+function displayWinText() {
   clearInterval(countdown);
-  document.getElementById("victory-text").classList.add("visible");
+  document.getElementById("win-text").classList.add("active");
 }
+

@@ -18,7 +18,7 @@ body {
   padding: 3%;
 }
 
-.page-title {
+.main-title {
   font-family: "Press Start 2P", cursive;
   color: #20d40b;
   font-weight: normal;
@@ -34,12 +34,12 @@ img {
   border-radius: 7px;
 }
 
-/* overlay-text will be displayed on a dark background color, 
+/* cover-text will be displayed on a dark background color, 
 using the z-index to create a sense of proximity to the user.
 This text is removed at the click event which will 
-delete the applied "visible class". */
+delete the applied "active class". */
 
-.overlay-text {
+.cover-text {
   display: none;
   position: fixed;
   text-align: center;
@@ -47,36 +47,36 @@ delete the applied "visible class". */
   left: 0;
   bottom: 0;
   right: 0;
-  justify-content: center;
-  align-items: center;
-  z-index: 100;
   color: #20d40b;
   background-color: #272e2ad3;
-  font-size: 3em;
+  font-size: 3.5em;
+  justify-content: center;
+  align-items: center;
+  z-index: 120;
 }
 
-.overlay-text-small {
+.cover-text-small {
   font-size: 0.5em;
 }
-.overlay-text.visible {
-  display: flex;
+.cover-text.active {
   flex-direction: column;
-}
-.game-info-container {
-  grid-column: 1/-1;
   display: flex;
+}
+.play-info-container {
+  display: flex;
+  grid-column: 1/-1;
   justify-content: space-between;
 }
-.overlay-text > p {
+.cover-text > p {
   font-size: 0.5em;
   color: #e9e9ee;
 }
 
-/* The information about the game as well as the "playing cards" elements are displayed using the grid. */
-.game-info {
+/* The information about the game as well as the "image" elements are displayed using the grid. */
+.play-info {
   font-family: "Press Start 2P", cursive;
-  color: azure;
   font-size: 1.3em;
+  color: azure;
 }
 
 .game-container {
@@ -89,58 +89,60 @@ delete the applied "visible class". */
   perspective: 479px;
 }
 
-.card {
+.image {
   position: relative;
   height: 135px;
   width: 100px;
 }
 
-/* I applied the transition and transform properties to display the rotation of the cards from one side to the other */
-.card-face {
-  position: absolute;
-  width: 100%;
-  height: 100%;
+/* I applied the transition and transform properties to display the rotation of the images from one side to the other */
+.image-face {
   display: flex;
   justify-content: center;
   align-items: center;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  
   backface-visibility: hidden;
   border-radius: 11px;
   transition: 400ms ease-in-out;
 }
 
-.card.visible .card-back {
+.image.active .image-back {
   transform: rotateY(-180deg);
 }
 
-.card.visible .card-front {
+.image.active .image-front {
   transform: rotateY(0);
 }
 
-.card-front {
+.image-front {
   transform: rotateY(180deg);
 }
 
 /* Media to make the game responsive, for screens smaller than 600px
- the cards will be displayed on 2 columns and the size of the texts will be reduced */
+ the imagess will be displayed on 2 columns and the size of the texts will be reduced */
 
 @media (max-width: 600px) {
-  .page-title {
+  .main-title {
     font-size: 2em;
   }
 
-  .overlay-text {
+  .cover-text {
     font-size: 2em;
     padding: 2%;
   }
+
   .game-container {
     grid-template-columns: repeat(2, auto);
     border: 0;
     padding: 2%;
   }
-  .game-info-container {
-    flex-direction: column;
-    align-items: center;
+  .play-info-container {
     margin-bottom: 5px;
     row-gap: 16px;
+    flex-direction: column;
+    align-items: center;
       }
 }
