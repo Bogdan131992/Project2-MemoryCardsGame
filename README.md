@@ -92,11 +92,11 @@ task within a certain time interval
 
 - As a user, when I turn over all the images in pairs of two of the same kind, I am greeted by a message on a transparent background that overlaps the game and which informs me that I have won, and gives me the opportunity to restart the game
 
-![img](readme-img/wingame-img.png)
+![img](readme-img/userwon.png)
 
 - As a user, if I do not manage to turn over all the images in 6o seconds, I am greeted by a message that informs me that the game is over and gives me the opportunity to restart the game
 
-![img](readme-img/game-over-img.png)
+![img](readme-img/userlost.png)
 
 ### Lighthouse check
 
