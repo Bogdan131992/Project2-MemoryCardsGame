@@ -165,11 +165,11 @@ From the github page I select my project, then I click on Gitpod green button.
 
 - To implement this game and to understand the algorithms behind the game, I was inspired by two projects that I found on YouTube.
 
-- For the structure of the program in HTML, especially the arrangement of the playing images, I was inspired by the project presented by freeCodeCamp.
+- For the structure of the program in HTML, especially the arrangement of the playing images, I was inspired by the project presented by WebDevSimplified and by freeCodeCamp.
 
 - For the functional part of Java Script as well as for how to apply the styles, I would use the videos presented by the YouTube channels WebDev and Port Exe.
 
-- In my code, I did not use objects as used in these projects for the JavaScript part, but only functions.
+- I tried as much as possible not to duplicate the code presented in these projects, by choosing other names as well as by implementing the Java Script part differently, i.e. instead of classes I used functions.
 
 - [freeCodeCamp](https://www.youtube.com/watch?v=ZniVgo8U7ek)
 
@@ -195,4 +195,4 @@ From the github page I select my project, then I click on Gitpod green button.
 - [img7.jpeg](https://stock.adobe.com/ie/images/long-eared-owl-asio-otus/171955612)
 
 - [img8.jpeg](https://stock.adobe.com/ie/images/adorable-cute-harvest-mice-micromys-minutus-on-yellow-tulip-flower-foliage-with-neutral-green-nature-background/287897661?asset_id=287897661)
-- [backcard.jpg](https://www.jucariesimagie.ro/4939-large_01bold/bicycle-verde-carti-de-joc.jpg)
+- [backimage.jpg](https://www.jucariesimagie.ro/4939-large_01bold/bicycle-verde-carti-de-joc.jpg)
