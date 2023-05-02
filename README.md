@@ -165,9 +165,7 @@ From the github page I select my project, then I click on Gitpod green button.
 
 - To implement this game and to understand the algorithms behind the game, I was inspired by two projects that I found on YouTube.
 
-- For the structure of the program in HTML, especially the arrangement of the playing images, I was inspired by the project presented by WebDevSimplified and by freeCodeCamp.
-
-- For the functional part of Java Script as well as for how to apply the styles, I would use the videos presented by the YouTube channels WebDev and Port Exe.
+- For the structure of the program in HTML and CSS, especially the arrangement of the playing images, I was inspired by the project presented by WebDevSimplified and by freeCodeCamp.
 
 - I tried as much as possible not to duplicate the code presented in these projects, by choosing other names as well as by implementing the Java Script part differently, i.e. instead of classes I used functions.
 
